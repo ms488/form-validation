@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="css/all.min.css"/>
+    <!-- Main style File -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- jQuery library -->
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <!-- jQuery validate library cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+    
+</head>
+<body>
+    <div class="split-screen">
+        <div class="left">
+            <h1>Explore your creativity</h1>
+            <p>over 1000 courses taught by real creatives</p>
+        </div>
+        <div class="right">
+            <form action="POST">
+                <div class="head">
+                    <h2>Sign Up</h2>
+                    <p>Already have an account? <strong><a href="log_in.html">Log In</a></strong></p>
+                </div>
+                <div class="alert">
+                    <strong>Successfully submitted!</strong>
+                    <p>The form is valid.</p>
+                    <span class="close">&times;</span>
+                </div>
+                <div class="input-container">
+                    <label for="fname">Full Name <small> (only 2 letters at least and spaces are allowed)</small></label>
+                    <input type="text" name="fname" id="fname">
+                </div>
+                <div class="input-container">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <div class="input-container">
+                    <label for="pass">Password <small> (at least 6 characters) and (at most 15 characters)</small></label>
+                    <input type="password" name="pass" id="pass" placeholder="Must be at least 6 characters">
+                    <!-- <i class="fas fa-eye-slash"></i> -->
+                </div>
+                <div class="input-container">
+                    <label for="passConfirm">Confirm Password</label>
+                    <input type="password" name="passConfirm" id="passConfirm">
+                </div>
+                <div class="input-container">
+                    <input type="checkbox" name="check" id="check">
+                    <label for="check" class="check">Sign up for email updates</label>
+                </div>
+                <input type="submit" value="SIGN UP">
+                <div class="foot">
+                    <p>By continuing, you agree to accept our <a href="privacy.html">Privacy Policy</a>&amp;<a href="terms_of_service.html">Terms of Service</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/demo.js"></script>
+</body>
+</html>
