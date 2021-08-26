@@ -1,0 +1,219 @@
+:root{
+    line-height:1.5;
+    --primary-blue:#233975;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+*::after,*::before{
+    box-sizing: border-box;
+}
+body{
+    padding:0;
+    margin:0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    width:100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+h1{
+    font-size:2.3rem;
+    font-weight: 700;
+    text-align: center;
+}
+h2{
+    font-size:2rem;
+    font-weight: 700;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    /* color:var(--primary-blue); */
+}
+a:hover{
+    text-decoration: underline;
+}
+p{
+    text-align: center;
+    font-weight: 400;
+    font-size:.9em;
+    margin:.5rem 0;
+
+}
+.split-screen{
+    display:flex;
+    width:100%;
+    height: 100%;
+}
+.left , .right{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:50%;
+}
+.left{
+    background-image:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.3)),
+                    url('../images/pexels-magda-ehlers-1279813.jpg');
+    background-size:100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    color:#fff;
+}
+.left p{
+    margin:1em 0;
+}
+.right form{
+    width:400px;
+    margin-inline:auto;
+    height: auto;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="password"]{
+    display:block;
+    width:100%;
+    padding:.7em;
+    border-radius: 8px;
+    border:1px solid #c4c4c4;
+    font-size:.9em;
+}
+label{
+    display:block;
+    margin-bottom: .2rem;
+    font-size: .8rem;
+}
+.input-container {
+    position: relative;
+    margin-top: 1rem;
+}
+label.check{
+    display:inline-block;
+    cursor: pointer;
+    position:absolute;
+    left:35px;
+    top:10%;
+    margin: 0;
+}
+.input-container input[type="checkbox"]{
+    width:25px;
+    height:25px;
+    cursor: pointer;
+    appearance: none;
+    position: relative;
+}
+
+.input-container input[type="checkbox"]::before{
+    font-family: 'Font Awesome 5 Free';/*it is required for the unicode in the content to show the icon*/
+    content:"\f00c";
+    font-weight: 900;/*it is required for the unicode in the content to show the icon*/
+    position: absolute;
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    border:1px solid #c4c4c4;
+    border-radius: 5px;
+    color: #fff;
+    transition: .2s;
+}
+
+.input-container input[type="checkbox"]:checked::before{
+    background-color: tomato;
+    border-color: tomato;
+}
+.input-container input[type="checkbox"]:active::before{
+    transform: scale(0);
+}
+input[type="submit"]{
+    display:block;
+    width:100%;
+    padding:.7em 0;
+    border-radius: 8px;
+    border:1px solid #c4c4c4;
+    margin-top: .8rem;
+    font-size:1rem;
+    font-weight: bold;
+    color:#fff;
+    background-color: tomato;
+    cursor: pointer;
+}
+@media(max-width:900px){
+    .split-screen{
+        flex-direction: column;
+    }
+    .left, .right{
+        width:100%;
+        padding-inline:1.5em;
+    }
+    .left{
+        min-height:190px;
+        background-size: cover;
+    }
+    h2{
+        margin-top: .5rem;
+    }
+
+}
+@media (max-width:499px) {
+    h1{
+        font-size: 1.3rem;
+    }
+    h2{
+        font-size: 1.2rem;
+    }
+    p{
+        font-size: .8rem;
+    }
+    label{
+        font-size: .7rem;
+    }
+    .right form{
+        width:90%;
+    }
+    .alert strong{
+        font-size: small;
+    }
+    
+}
+.alert{
+    width:100%;
+    padding:.5em;
+    background-color: rgb(80, 238, 80);
+    border-radius: 8px;
+    overflow:hidden;
+    position: relative;
+    display:none;
+}
+.alert strong{
+    float: left;
+    margin-right:5px;
+
+}
+.alert p{
+    padding:0;
+    margin: 0;
+    float:left;
+    margin-right:5px;
+
+}
+.alert .close{
+    position: absolute;
+    top:0px;
+    right:5px;
+    font-size: 1.5rem;
+    color:darkgreen;
+    cursor: pointer;
+}
+label.error{
+    color:red;
+    margin:0;
+}
+small{
+    font-weight: 500;
+}
