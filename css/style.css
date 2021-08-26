@@ -40,7 +40,7 @@ p{
     text-align: center;
     font-weight: 400;
     font-size:.9em;
-    margin:.9rem 0;
+    margin:.5rem 0;
 
 }
 .split-screen{
@@ -212,6 +212,7 @@ input[type="submit"]{
 }
 label.error{
     color:red;
+    margin:0;
 }
 small{
     font-weight: 500;
